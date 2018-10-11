@@ -8,3 +8,13 @@ C:\Users\rirvinx\source\repos\Simon\Simon\obj\Debug\Simon.csproj.CoreCompileInpu
 C:\Users\rirvinx\source\repos\Simon\Simon\obj\Debug\Simon.exe
 C:\Users\rirvinx\source\repos\Simon\Simon\obj\Debug\Simon.pdb
 C:\Users\rirvinx\source\repos\Simon\Simon\obj\Debug\Simon.frmSimon.resources
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\bin\Debug\Simon.exe.config
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\bin\Debug\Simon.exe
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\bin\Debug\Simon.pdb
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\obj\Debug\Simon.csprojAssemblyReference.cache
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\obj\Debug\Simon.frmSimon.resources
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\obj\Debug\Simon.Properties.Resources.resources
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\obj\Debug\Simon.csproj.GenerateResource.cache
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\obj\Debug\Simon.csproj.CoreCompileInputs.cache
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\obj\Debug\Simon.exe
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\Simon\Simon\obj\Debug\Simon.pdb

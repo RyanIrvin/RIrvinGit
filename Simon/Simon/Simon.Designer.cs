@@ -28,88 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBlue = new System.Windows.Forms.Button();
-            this.btnGreen = new System.Windows.Forms.Button();
-            this.btnYellow = new System.Windows.Forms.Button();
-            this.btnRed = new System.Windows.Forms.Button();
-            this.lblLevelText = new System.Windows.Forms.Label();
-            this.lblLevelValue = new System.Windows.Forms.Label();
+            this.BtnBlue = new System.Windows.Forms.Button();
+            this.BtnGreen = new System.Windows.Forms.Button();
+            this.BtnYellow = new System.Windows.Forms.Button();
+            this.BtnRed = new System.Windows.Forms.Button();
+            this.lblLevel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBlue
             // 
-            this.btnBlue.BackColor = System.Drawing.Color.Blue;
-            this.btnBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBlue.Location = new System.Drawing.Point(169, 46);
-            this.btnBlue.Name = "btnBlue";
-            this.btnBlue.Size = new System.Drawing.Size(151, 98);
-            this.btnBlue.TabIndex = 4;
-            this.btnBlue.UseVisualStyleBackColor = false;
-            this.btnBlue.Click += new System.EventHandler(this.BtnBlue_Click);
+            this.BtnBlue.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBlue.Location = new System.Drawing.Point(169, 46);
+            this.BtnBlue.Name = "btnBlue";
+            this.BtnBlue.Size = new System.Drawing.Size(151, 98);
+            this.BtnBlue.TabIndex = 4;
+            this.BtnBlue.Text = "Blue";
+            this.BtnBlue.UseVisualStyleBackColor = false;
+            this.BtnBlue.Click += new System.EventHandler(this.BtnBlue_Click);
             // 
             // btnGreen
             // 
-            this.btnGreen.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGreen.Location = new System.Drawing.Point(12, 149);
-            this.btnGreen.Name = "btnGreen";
-            this.btnGreen.Size = new System.Drawing.Size(151, 98);
-            this.btnGreen.TabIndex = 5;
-            this.btnGreen.UseVisualStyleBackColor = false;
-            this.btnGreen.Click += new System.EventHandler(this.BtnGreen_Click);
+            this.BtnGreen.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGreen.Location = new System.Drawing.Point(12, 149);
+            this.BtnGreen.Name = "btnGreen";
+            this.BtnGreen.Size = new System.Drawing.Size(151, 98);
+            this.BtnGreen.TabIndex = 5;
+            this.BtnGreen.Text = "Green";
+            this.BtnGreen.UseVisualStyleBackColor = false;
+            this.BtnGreen.Click += new System.EventHandler(this.BtnGreen_Click);
             // 
             // btnYellow
             // 
-            this.btnYellow.BackColor = System.Drawing.Color.Yellow;
-            this.btnYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYellow.Location = new System.Drawing.Point(169, 150);
-            this.btnYellow.Name = "btnYellow";
-            this.btnYellow.Size = new System.Drawing.Size(151, 98);
-            this.btnYellow.TabIndex = 6;
-            this.btnYellow.UseVisualStyleBackColor = false;
-            this.btnYellow.Click += new System.EventHandler(this.BtnYellow_Click);
+            this.BtnYellow.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnYellow.Location = new System.Drawing.Point(169, 150);
+            this.BtnYellow.Name = "btnYellow";
+            this.BtnYellow.Size = new System.Drawing.Size(151, 98);
+            this.BtnYellow.TabIndex = 6;
+            this.BtnYellow.Text = "Yellow";
+            this.BtnYellow.UseVisualStyleBackColor = false;
+            this.BtnYellow.Click += new System.EventHandler(this.BtnYellow_Click);
             // 
             // btnRed
             // 
-            this.btnRed.BackColor = System.Drawing.Color.Red;
-            this.btnRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRed.Location = new System.Drawing.Point(12, 45);
-            this.btnRed.Name = "btnRed";
-            this.btnRed.Size = new System.Drawing.Size(151, 98);
-            this.btnRed.TabIndex = 7;
-            this.btnRed.UseVisualStyleBackColor = false;
-            this.btnRed.Click += new System.EventHandler(this.BtnRed_Click);
+            this.BtnRed.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRed.Location = new System.Drawing.Point(12, 45);
+            this.BtnRed.Name = "btnRed";
+            this.BtnRed.Size = new System.Drawing.Size(151, 98);
+            this.BtnRed.TabIndex = 7;
+            this.BtnRed.Text = "Red";
+            this.BtnRed.UseVisualStyleBackColor = false;
+            this.BtnRed.Click += new System.EventHandler(this.BtnRed_Click);
             // 
-            // lblLevelText
+            // lblLevel
             // 
-            this.lblLevelText.AutoSize = true;
-            this.lblLevelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevelText.Location = new System.Drawing.Point(12, 9);
-            this.lblLevelText.Name = "lblLevelText";
-            this.lblLevelText.Size = new System.Drawing.Size(60, 24);
-            this.lblLevelText.TabIndex = 8;
-            this.lblLevelText.Text = "Level:";
-            // 
-            // lblLevelValue
-            // 
-            this.lblLevelValue.AutoSize = true;
-            this.lblLevelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevelValue.Location = new System.Drawing.Point(70, 9);
-            this.lblLevelValue.Name = "lblLevelValue";
-            this.lblLevelValue.Size = new System.Drawing.Size(0, 24);
-            this.lblLevelValue.TabIndex = 9;
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.Location = new System.Drawing.Point(12, 9);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(60, 24);
+            this.lblLevel.TabIndex = 8;
+            this.lblLevel.Text = "Level:";
             // 
             // frmSimon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 260);
-            this.Controls.Add(this.lblLevelValue);
-            this.Controls.Add(this.lblLevelText);
-            this.Controls.Add(this.btnRed);
-            this.Controls.Add(this.btnYellow);
-            this.Controls.Add(this.btnGreen);
-            this.Controls.Add(this.btnBlue);
+            this.Controls.Add(this.lblLevel);
+            this.Controls.Add(this.BtnRed);
+            this.Controls.Add(this.BtnYellow);
+            this.Controls.Add(this.BtnGreen);
+            this.Controls.Add(this.BtnBlue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmSimon";
@@ -122,12 +115,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnBlue;
-        private System.Windows.Forms.Button btnGreen;
-        private System.Windows.Forms.Button btnYellow;
-        private System.Windows.Forms.Button btnRed;
-        private System.Windows.Forms.Label lblLevelText;
-        private System.Windows.Forms.Label lblLevelValue;
+        private System.Windows.Forms.Button BtnBlue;
+        private System.Windows.Forms.Button BtnGreen;
+        private System.Windows.Forms.Button BtnYellow;
+        private System.Windows.Forms.Button BtnRed;
+        private System.Windows.Forms.Label lblLevel;
     }
 }
 
