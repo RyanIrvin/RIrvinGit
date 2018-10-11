@@ -61,8 +61,8 @@ namespace Simon
 
         void TestCorrect(int color)
         {
-            if (playing)
-                return;
+            //if (playing)
+                //return;
 
             if(pattern[currentStep] == color)
                 currentStep++;
@@ -97,21 +97,35 @@ namespace Simon
 
         private void BtnRed_Click(object sender, EventArgs e)
         {
+            BtnRed.BackColor = Color.Red;
+            Thread.Sleep(50);
+            BtnRed.BackColor = Color.Transparent;
             TestCorrect(0);
         }
 
         private void BtnBlue_Click(object sender, EventArgs e)
         {
+            BtnBlue.BackColor = Color.Blue;
+            Thread.Sleep(50);
+            BtnBlue.BackColor = Color.Transparent;
+
             TestCorrect(1);
         }
 
         private void BtnGreen_Click(object sender, EventArgs e)
         {
+            BtnGreen.BackColor = Color.Green;
+            Thread.Sleep(50);
+            BtnGreen.BackColor = Color.Transparent;
+
             TestCorrect(2);
         }
 
         private void BtnYellow_Click(object sender, EventArgs e)
         {
+            BtnYellow.BackColor = Color.Yellow;
+            Thread.Sleep(50);
+            BtnYellow.BackColor = Color.Transparent;
             TestCorrect(3);
         }
     }
