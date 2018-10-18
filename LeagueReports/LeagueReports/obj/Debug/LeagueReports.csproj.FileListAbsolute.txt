@@ -1,0 +1,13 @@
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\bin\Debug\LeagueReports.exe.config
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\bin\Debug\LeagueReports.exe
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\bin\Debug\LeagueReports.pdb
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\obj\Debug\LeagueReports.csprojAssemblyReference.cache
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\obj\Debug\LeagueReports.Form1.resources
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\obj\Debug\LeagueReports.Properties.Resources.resources
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\obj\Debug\LeagueReports.csproj.GenerateResource.cache
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\obj\Debug\LeagueReports.csproj.CoreCompileInputs.cache
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\obj\Debug\LeagueReports.exe
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\obj\Debug\LeagueReports.pdb
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rirvinx\Documents\GitHub\RIrvinGit\LeagueReports\LeagueReports\obj\Debug\LeagueReports.csproj.CopyComplete
