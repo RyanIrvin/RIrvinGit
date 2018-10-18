@@ -95,12 +95,14 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(313, 9);
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(306, 7);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(0, 17);
+            this.lblTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTitle.Size = new System.Drawing.Size(166, 35);
             this.lblTitle.TabIndex = 5;
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LastPlayedChampionLabel
             // 

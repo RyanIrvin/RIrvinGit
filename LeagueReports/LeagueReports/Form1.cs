@@ -35,23 +35,38 @@ namespace LeagueReports
         private void btnSearch_Click(object sender, EventArgs e)
         {
             SummonerNameData data = GetSummonerProfileData(txtSummonerName.Text);
+            int summonerId = data.AccountId;
 
-            lblSummonerName.Text = data.SummonerName;
-            lblTitle.Text = data.SummonerName;
+            MatchList matchList = GetMatchData(summonerId);
+
+            lblSummonerName.Text = data.Name;
+            lblTitle.Text = data.Name;
             lblSummonerLevel.Text = data.SummonerLevel.ToString();
+
+            lblLastPlayedChampion.Text = matchList.Matches[0].Champion.ToString();
+
         }
 
         static public SummonerNameData GetSummonerProfileData(string userName)
-        //static public string GetSummonerProfileData(string userName)
         {
             SetUrl("summoner/v3/summoners/by-name/", userName);
-
             return JsonConvert.DeserializeObject<SummonerNameData>(MakeRequest());
+        }
+
+        static public MatchList GetMatchData(int summonerId)
+        {
+            SetUrl("match/v3/matchlists/by-account/", summonerId);
+            return JsonConvert.DeserializeObject<MatchList>(MakeRequest());
         }
 
         static private void SetUrl(string url, string userName)
         {
             Url = String.Format(@"{0}{1}{2}{3}", RIOT_API_URL, url, userName, APIKey);
+        }
+
+        static private void SetUrl(string url, int summonderId)
+        {
+            Url = String.Format(@"{0}{1}{2}{3}", RIOT_API_URL, url, summonderId, APIKey);
         }
 
         static public string MakeRequest()
