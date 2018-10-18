@@ -8,3 +8,13 @@ C:\Users\Ryan\source\repos\API Stuff\API Stuff\obj\Debug\API Stuff.pdb
 C:\Users\Ryan\source\repos\API Stuff\API Stuff\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Ryan\source\repos\API Stuff\API Stuff\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Ryan\source\repos\API Stuff\API Stuff\obj\Debug\API Stuff.csproj.CopyComplete
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\obj\Debug\API Stuff.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\obj\Debug\API Stuff.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\obj\Debug\API Stuff.exe
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\obj\Debug\API Stuff.pdb
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\bin\Debug\API Stuff.exe.config
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\bin\Debug\API Stuff.exe
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\bin\Debug\API Stuff.pdb
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ryan\Documents\GitHub\RIrvinGit\API Stuff\API Stuff\obj\Debug\API Stuff.csproj.CopyComplete

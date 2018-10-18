@@ -28,14 +28,17 @@ namespace API_Stuff
                 if (userName.Equals("x"))
                     break;
                 SummonerNameData data = GetSummonerNameData(userName);
-                Console.WriteLine();
+                Console.WriteLine(data.Name);
             }
 
         } 
 
         static public SummonerNameData GetSummonerNameData(string userName)
         {
-            SetUrl("platform/v3/champion-rotations/");
+            SetUrl("summoner/v3/summoners/by-name/", userName);
+            
+
+                //platform / v3 / champion - rotations /
             return JsonConvert.DeserializeObject<SummonerNameData>(MakeRequest());
         }
 
