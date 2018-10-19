@@ -80,7 +80,7 @@
             this.LevelLabel.Location = new System.Drawing.Point(12, 91);
             this.LevelLabel.Name = "LevelLabel";
             this.LevelLabel.Size = new System.Drawing.Size(46, 17);
-            this.LevelLabel.TabIndex = 3;
+            this.LevelLabel.TabIndex = 4;
             this.LevelLabel.Text = "Level:";
             // 
             // PreferredRoleLabel
@@ -90,18 +90,18 @@
             this.PreferredRoleLabel.Location = new System.Drawing.Point(12, 155);
             this.PreferredRoleLabel.Name = "PreferredRoleLabel";
             this.PreferredRoleLabel.Size = new System.Drawing.Size(105, 17);
-            this.PreferredRoleLabel.TabIndex = 4;
+            this.PreferredRoleLabel.TabIndex = 8;
             this.PreferredRoleLabel.Text = "Preferred Role:";
             // 
             // lblTitle
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(306, 7);
+            this.lblTitle.Location = new System.Drawing.Point(306, 12);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTitle.Size = new System.Drawing.Size(166, 35);
-            this.lblTitle.TabIndex = 5;
+            this.lblTitle.TabIndex = 14;
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LastPlayedChampionLabel
@@ -111,7 +111,7 @@
             this.LastPlayedChampionLabel.Location = new System.Drawing.Point(12, 187);
             this.LastPlayedChampionLabel.Name = "LastPlayedChampionLabel";
             this.LastPlayedChampionLabel.Size = new System.Drawing.Size(153, 17);
-            this.LastPlayedChampionLabel.TabIndex = 6;
+            this.LastPlayedChampionLabel.TabIndex = 10;
             this.LastPlayedChampionLabel.Text = "Last Played Champion:";
             // 
             // LastGameStatsLabel
@@ -121,7 +121,7 @@
             this.LastGameStatsLabel.Location = new System.Drawing.Point(12, 219);
             this.LastGameStatsLabel.Name = "LastGameStatsLabel";
             this.LastGameStatsLabel.Size = new System.Drawing.Size(127, 17);
-            this.LastGameStatsLabel.TabIndex = 8;
+            this.LastGameStatsLabel.TabIndex = 12;
             this.LastGameStatsLabel.Text = "Last Game\'s Stats:";
             // 
             // lblSummonerName
@@ -131,7 +131,7 @@
             this.lblSummonerName.Location = new System.Drawing.Point(130, 63);
             this.lblSummonerName.Name = "lblSummonerName";
             this.lblSummonerName.Size = new System.Drawing.Size(0, 17);
-            this.lblSummonerName.TabIndex = 9;
+            this.lblSummonerName.TabIndex = 3;
             // 
             // lblSummonerLevel
             // 
@@ -140,31 +140,31 @@
             this.lblSummonerLevel.Location = new System.Drawing.Point(54, 91);
             this.lblSummonerLevel.Name = "lblSummonerLevel";
             this.lblSummonerLevel.Size = new System.Drawing.Size(0, 17);
-            this.lblSummonerLevel.TabIndex = 10;
+            this.lblSummonerLevel.TabIndex = 5;
             // 
             // lblPreferredRole
             // 
             this.lblPreferredRole.AutoSize = true;
             this.lblPreferredRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreferredRole.Location = new System.Drawing.Point(110, 123);
+            this.lblPreferredRole.Location = new System.Drawing.Point(115, 152);
             this.lblPreferredRole.Name = "lblPreferredRole";
             this.lblPreferredRole.Size = new System.Drawing.Size(0, 17);
-            this.lblPreferredRole.TabIndex = 11;
+            this.lblPreferredRole.TabIndex = 9;
             // 
             // lblLastPlayedChampion
             // 
             this.lblLastPlayedChampion.AutoSize = true;
             this.lblLastPlayedChampion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastPlayedChampion.Location = new System.Drawing.Point(158, 155);
+            this.lblLastPlayedChampion.Location = new System.Drawing.Point(163, 190);
             this.lblLastPlayedChampion.Name = "lblLastPlayedChampion";
             this.lblLastPlayedChampion.Size = new System.Drawing.Size(0, 17);
-            this.lblLastPlayedChampion.TabIndex = 12;
+            this.lblLastPlayedChampion.TabIndex = 11;
             // 
             // lblLastGameStats
             // 
             this.lblLastGameStats.AutoSize = true;
             this.lblLastGameStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastGameStats.Location = new System.Drawing.Point(133, 187);
+            this.lblLastGameStats.Location = new System.Drawing.Point(137, 216);
             this.lblLastGameStats.Name = "lblLastGameStats";
             this.lblLastGameStats.Size = new System.Drawing.Size(0, 17);
             this.lblLastGameStats.TabIndex = 13;
@@ -176,20 +176,21 @@
             this.SummonerRankLabel.Location = new System.Drawing.Point(12, 123);
             this.SummonerRankLabel.Name = "SummonerRankLabel";
             this.SummonerRankLabel.Size = new System.Drawing.Size(45, 17);
-            this.SummonerRankLabel.TabIndex = 14;
+            this.SummonerRankLabel.TabIndex = 6;
             this.SummonerRankLabel.Text = "Rank:";
             // 
             // lblSummonerRank
             // 
             this.lblSummonerRank.AutoSize = true;
             this.lblSummonerRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummonerRank.Location = new System.Drawing.Point(52, 123);
+            this.lblSummonerRank.Location = new System.Drawing.Point(56, 123);
             this.lblSummonerRank.Name = "lblSummonerRank";
             this.lblSummonerRank.Size = new System.Drawing.Size(0, 17);
-            this.lblSummonerRank.TabIndex = 15;
+            this.lblSummonerRank.TabIndex = 7;
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 312);

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net.Http;
 using System.Configuration;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace LeagueReports
 {
@@ -19,6 +20,7 @@ namespace LeagueReports
         static string APIKey;
         static HttpClient Client;
         const string RIOT_API_URL = "https://na1.api.riotgames.com/lol/";
+        const string CHAMP_LIST = "http://ddragon.leagueoflegends.com/cdn/8.19.1/data/en_US/champion.json";
 
         public Form1()
         {
@@ -37,14 +39,28 @@ namespace LeagueReports
             SummonerNameData data = GetSummonerProfileData(txtSummonerName.Text);
             int summonerId = data.AccountId;
 
-            MatchList matchList = GetMatchData(summonerId);
-
             lblSummonerName.Text = data.Name;
-            lblTitle.Text = data.Name;
+            //lblTitle.Text = data.Name;
+            lblTitle.Text = data.Id.ToString();
             lblSummonerLevel.Text = data.SummonerLevel.ToString();
+            
+            
+            MatchList matchList = GetMatchData(summonerId);
+            lblLastPlayedChampion.Text = GetChampionData(Client.GetAsync(CHAMP_LIST).Result.Content.ReadAsStringAsync().Result, matchList.Matches[0].Champion).Id;
 
-            lblLastPlayedChampion.Text = matchList.Matches[0].Champion.ToString();
+            RankInfo rankData = GetRankData(data.Id);
+            lblSummonerRank.Text = rankData.Rank;
 
+        }
+         public Champion GetChampionData(string jsonResult, int championKey)
+        {
+            JToken jToken = JToken.Parse(jsonResult);
+            List<Champion> allChampions = new List<Champion>();
+            foreach(JToken jsonChampion in jToken["data"])
+            {
+                allChampions.Add(JsonConvert.DeserializeObject<Champion>(jsonChampion.First().ToString()));
+            }
+            return allChampions.Where(champion => champion.Key.CompareTo(championKey) == 0).FirstOrDefault();
         }
 
         static public SummonerNameData GetSummonerProfileData(string userName)
@@ -57,6 +73,23 @@ namespace LeagueReports
         {
             SetUrl("match/v3/matchlists/by-account/", summonerId);
             return JsonConvert.DeserializeObject<MatchList>(MakeRequest());
+        }
+        static public RankInfo GetRankData(int summonerId)
+        {
+            SetUrl("league/v3/positions/by-summoner/", summonerId);
+            //return JsonConvert.DeserializeObject<RankInfo>(MakeRequest());
+
+            string jsonResult = Client.GetAsync(Url).Result.Content.ReadAsStringAsync().Result;
+
+            JToken jTokenRank = JToken.Parse(jsonResult);
+            List<RankInfo> allRankQueues = new List<RankInfo>();
+                        
+            foreach (JToken jsonRankQueue in jTokenRank)
+            {
+                allRankQueues.Add(JsonConvert.DeserializeObject<RankInfo>(jsonRankQueue.First.ToString()));
+            }
+
+            return allRankQueues.Where(queue => queue.QueueType == "RANKED_SOLO_5x5").FirstOrDefault();
         }
 
         static private void SetUrl(string url, string userName)
@@ -78,4 +111,6 @@ namespace LeagueReports
             }
         }
     }
+
+
 }
