@@ -43,6 +43,10 @@
             this.lblLastGameStats = new System.Windows.Forms.Label();
             this.SummonerRankLabel = new System.Windows.Forms.Label();
             this.lblSummonerRank = new System.Windows.Forms.Label();
+            this.KdaLabel = new System.Windows.Forms.Label();
+            this.lblKda = new System.Windows.Forms.Label();
+            this.VisionScoreLabel = new System.Windows.Forms.Label();
+            this.lblVisionScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSummonerName
@@ -101,7 +105,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTitle.Size = new System.Drawing.Size(166, 35);
-            this.lblTitle.TabIndex = 14;
+            this.lblTitle.TabIndex = 35;
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LastPlayedChampionLabel
@@ -155,7 +159,7 @@
             // 
             this.lblLastPlayedChampion.AutoSize = true;
             this.lblLastPlayedChampion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastPlayedChampion.Location = new System.Drawing.Point(163, 190);
+            this.lblLastPlayedChampion.Location = new System.Drawing.Point(163, 187);
             this.lblLastPlayedChampion.Name = "lblLastPlayedChampion";
             this.lblLastPlayedChampion.Size = new System.Drawing.Size(0, 17);
             this.lblLastPlayedChampion.TabIndex = 11;
@@ -164,7 +168,7 @@
             // 
             this.lblLastGameStats.AutoSize = true;
             this.lblLastGameStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastGameStats.Location = new System.Drawing.Point(137, 216);
+            this.lblLastGameStats.Location = new System.Drawing.Point(137, 219);
             this.lblLastGameStats.Name = "lblLastGameStats";
             this.lblLastGameStats.Size = new System.Drawing.Size(0, 17);
             this.lblLastGameStats.TabIndex = 13;
@@ -188,12 +192,54 @@
             this.lblSummonerRank.Size = new System.Drawing.Size(0, 17);
             this.lblSummonerRank.TabIndex = 7;
             // 
+            // KdaLabel
+            // 
+            this.KdaLabel.AutoSize = true;
+            this.KdaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KdaLabel.Location = new System.Drawing.Point(28, 247);
+            this.KdaLabel.Name = "KdaLabel";
+            this.KdaLabel.Size = new System.Drawing.Size(32, 13);
+            this.KdaLabel.TabIndex = 15;
+            this.KdaLabel.Text = "KDA:";
+            // 
+            // lblKda
+            // 
+            this.lblKda.AutoSize = true;
+            this.lblKda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKda.Location = new System.Drawing.Point(57, 247);
+            this.lblKda.Name = "lblKda";
+            this.lblKda.Size = new System.Drawing.Size(0, 13);
+            this.lblKda.TabIndex = 16;
+            // 
+            // VisionScoreLabel
+            // 
+            this.VisionScoreLabel.AutoSize = true;
+            this.VisionScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisionScoreLabel.Location = new System.Drawing.Point(28, 268);
+            this.VisionScoreLabel.Name = "VisionScoreLabel";
+            this.VisionScoreLabel.Size = new System.Drawing.Size(69, 13);
+            this.VisionScoreLabel.TabIndex = 17;
+            this.VisionScoreLabel.Text = "Vision Score:";
+            // 
+            // lblVisionScore
+            // 
+            this.lblVisionScore.AutoSize = true;
+            this.lblVisionScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisionScore.Location = new System.Drawing.Point(93, 268);
+            this.lblVisionScore.Name = "lblVisionScore";
+            this.lblVisionScore.Size = new System.Drawing.Size(0, 13);
+            this.lblVisionScore.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 312);
+            this.Controls.Add(this.lblVisionScore);
+            this.Controls.Add(this.VisionScoreLabel);
+            this.Controls.Add(this.lblKda);
+            this.Controls.Add(this.KdaLabel);
             this.Controls.Add(this.lblSummonerRank);
             this.Controls.Add(this.SummonerRankLabel);
             this.Controls.Add(this.lblLastGameStats);
@@ -234,6 +280,10 @@
         private System.Windows.Forms.Label lblLastGameStats;
         private System.Windows.Forms.Label SummonerRankLabel;
         private System.Windows.Forms.Label lblSummonerRank;
+        private System.Windows.Forms.Label KdaLabel;
+        private System.Windows.Forms.Label lblKda;
+        private System.Windows.Forms.Label VisionScoreLabel;
+        private System.Windows.Forms.Label lblVisionScore;
     }
 }
 

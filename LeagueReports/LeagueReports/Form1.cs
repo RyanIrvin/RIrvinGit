@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
 using System.Configuration;
+using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -40,7 +41,6 @@ namespace LeagueReports
             int summonerId = data.AccountId;
 
             lblSummonerName.Text = data.Name;
-            //lblTitle.Text = data.Name;
             lblTitle.Text = data.Id.ToString();
             lblSummonerLevel.Text = data.SummonerLevel.ToString();
             
@@ -49,10 +49,37 @@ namespace LeagueReports
             lblLastPlayedChampion.Text = GetChampionData(Client.GetAsync(CHAMP_LIST).Result.Content.ReadAsStringAsync().Result, matchList.Matches[0].Champion).Id;
 
             RankInfo rankData = GetRankData(data.Id);
-            lblSummonerRank.Text = rankData.Rank;
+            lblSummonerRank.Text = $"{rankData.Tier} {rankData.Rank} ({rankData.Wins}/{rankData.Losses}) {rankData.WinPercentage}%";
+
+            long lastGameId = 2892431075; //matchList.Matches[0].GameId;
+
+            MatchStats matchStats = GetMatchStats(lastGameId);
+
+            int participantId = 0;
+
+            foreach (ParticipantIdentity participant in matchStats.ParticipantIdentities)
+            {
+                if(participant.Player.SummonerName == data.Name)
+                {
+                    participantId = participant.ParticipantId;
+                    break;
+                }
+            }
+
+            //lblLastGameStats.Text = matchStats.ParticipantIdentities[participantId - 1].Player.SummonerName;
+            lblKda.Text = $"{matchStats.Participants[participantId - 1].stats.Kills}/{matchStats.Participants[participantId - 1].stats.Deaths}/{matchStats.Participants[participantId - 1].stats.Assists}";
+            lblVisionScore.Text = matchStats.Participants[participantId - 1].stats.VisionScore.ToString();
+        }
+
+        static public MatchStats GetMatchStats(long matchId)
+        {
+            SetUrl($"match/v3/matches/", matchId);
+
+            return JsonConvert.DeserializeObject<MatchStats>(MakeRequest());
 
         }
-         public Champion GetChampionData(string jsonResult, int championKey)
+
+        public Champion GetChampionData(string jsonResult, int championKey)
         {
             JToken jToken = JToken.Parse(jsonResult);
             List<Champion> allChampions = new List<Champion>();
@@ -63,7 +90,7 @@ namespace LeagueReports
             return allChampions.Where(champion => champion.Key.CompareTo(championKey) == 0).FirstOrDefault();
         }
 
-        static public SummonerNameData GetSummonerProfileData(string userName)
+        public SummonerNameData GetSummonerProfileData(string userName)
         {
             SetUrl("summoner/v3/summoners/by-name/", userName);
             return JsonConvert.DeserializeObject<SummonerNameData>(MakeRequest());
@@ -77,7 +104,6 @@ namespace LeagueReports
         static public RankInfo GetRankData(int summonerId)
         {
             SetUrl("league/v3/positions/by-summoner/", summonerId);
-            //return JsonConvert.DeserializeObject<RankInfo>(MakeRequest());
 
             string jsonResult = Client.GetAsync(Url).Result.Content.ReadAsStringAsync().Result;
 
@@ -86,7 +112,7 @@ namespace LeagueReports
                         
             foreach (JToken jsonRankQueue in jTokenRank)
             {
-                allRankQueues.Add(JsonConvert.DeserializeObject<RankInfo>(jsonRankQueue.First.ToString()));
+                allRankQueues.Add(JsonConvert.DeserializeObject<RankInfo>(jsonRankQueue.ToString()));
             }
 
             return allRankQueues.Where(queue => queue.QueueType == "RANKED_SOLO_5x5").FirstOrDefault();
@@ -100,6 +126,11 @@ namespace LeagueReports
         static private void SetUrl(string url, int summonderId)
         {
             Url = String.Format(@"{0}{1}{2}{3}", RIOT_API_URL, url, summonderId, APIKey);
+        }
+
+        static private void SetUrl(string url, long gameId)
+        {
+            Url = String.Format(@"{0}{1}{2}{3}", RIOT_API_URL, url, gameId, APIKey);
         }
 
         static public string MakeRequest()
