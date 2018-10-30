@@ -24,11 +24,17 @@ namespace LeagueReports
 
     public class Participants
     {
-        public ParticipantStats stats { get; set; }
+        public ParticipantStats Stats { get; set; }
+        public ParticipantTimeline Timeline { get; set; }
         public int ParticipantId { get; set; }
         public int TeamId { get; set; } //100 for blue side, 200 for redside
         public int Spell1Id { get; set; }
         public int Spell2Id { get; set; }
+    }
+
+    public class ParticipantTimeline
+    {
+        public string Lane { get; set; }
     }
 
     public class ParticipantIdentity
@@ -45,6 +51,14 @@ namespace LeagueReports
         public int Assists { get; set; }
         public bool FirstBloodKill { get; set; }
         public int PentaKills { get; set; }
+        public int Item0 { get; set; }
+        public int Item1 { get; set; }
+        public int Item2 { get; set; }
+        public int Item3 { get; set; }
+        public int Item4 { get; set; }
+        public int Item5 { get; set; }
+        public int Item6 { get; set; }
+
     }
 
     public class PlayerInfo
@@ -54,4 +68,6 @@ namespace LeagueReports
         public long AccountId { get; set; }
         public string MatchHistoryUri { get; set; }
     }
+
+
 }

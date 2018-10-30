@@ -21,7 +21,11 @@ namespace LeagueReports
         static string APIKey;
         static HttpClient Client;
         const string RIOT_API_URL = "https://na1.api.riotgames.com/lol/";
-        const string CHAMP_LIST = "http://ddragon.leagueoflegends.com/cdn/8.19.1/data/en_US/champion.json";
+        const string CHAMP_LIST = "http://ddragon.leagueoflegends.com/cdn/8.21.1/data/en_US/champion.json";
+        const string CHAMP_ICONS = "http://ddragon.leagueoflegends.com/cdn/8.21.1/img/champion/";
+        const string SUMMONER_SPELL_LIST = "http://ddragon.leagueoflegends.com/cdn/8.21.1/data/en_US/summoner.json";
+        const string SUMMONER_SPELL_ICONS = "http://ddragon.leagueoflegends.com/cdn/8.21.1/img/spell/";
+        const string ITEM_ICONS = "http://ddragon.leagueoflegends.com/cdn/8.21.1/img/item/";
 
         public Form1()
         {
@@ -41,17 +45,22 @@ namespace LeagueReports
             int summonerId = data.AccountId;
 
             lblSummonerName.Text = data.Name;
-            lblTitle.Text = data.Id.ToString();
             lblSummonerLevel.Text = data.SummonerLevel.ToString();
-            
-            
+
+            picChampionicon.Enabled = true;
+            //picProfileIcon.ImageLocation = ;
+
+
             MatchList matchList = GetMatchData(summonerId);
-            lblLastPlayedChampion.Text = GetChampionData(Client.GetAsync(CHAMP_LIST).Result.Content.ReadAsStringAsync().Result, matchList.Matches[0].Champion).Id;
+
+            string lastPlayedChampion = GetChampionData(Client.GetAsync(CHAMP_LIST).Result.Content.ReadAsStringAsync().Result, matchList.Matches[0].Champion).Id;
+            lblLastPlayedChampion.Text = lastPlayedChampion;
 
             RankInfo rankData = GetRankData(data.Id);
             lblSummonerRank.Text = $"{rankData.Tier} {rankData.Rank} ({rankData.Wins}/{rankData.Losses}) {rankData.WinPercentage}%";
 
-            long lastGameId = 2892431075; //matchList.Matches[0].GameId;
+            //long lastGameId = 2892431075; //matchList.Matches[0].GameId;
+            long lastGameId = matchList.Matches[0].GameId;
 
             MatchStats matchStats = GetMatchStats(lastGameId);
 
@@ -59,7 +68,7 @@ namespace LeagueReports
 
             foreach (ParticipantIdentity participant in matchStats.ParticipantIdentities)
             {
-                if(participant.Player.SummonerName == data.Name)
+                if (participant.Player.SummonerName == data.Name)
                 {
                     participantId = participant.ParticipantId;
                     break;
@@ -67,8 +76,50 @@ namespace LeagueReports
             }
 
             //lblLastGameStats.Text = matchStats.ParticipantIdentities[participantId - 1].Player.SummonerName;
-            lblKda.Text = $"{matchStats.Participants[participantId - 1].stats.Kills}/{matchStats.Participants[participantId - 1].stats.Deaths}/{matchStats.Participants[participantId - 1].stats.Assists}";
-            lblVisionScore.Text = matchStats.Participants[participantId - 1].stats.VisionScore.ToString();
+            lblKda.Text = $"{matchStats.Participants[participantId - 1].Stats.Kills}/{matchStats.Participants[participantId - 1].Stats.Deaths}/{matchStats.Participants[participantId - 1].Stats.Assists}";
+            lblVisionScore.Text = matchStats.Participants[participantId - 1].Stats.VisionScore.ToString();
+
+            SetDataDragonChampionUrl(lastPlayedChampion);
+            picChampionicon.Load(Url);
+            picChampionicon.Visible = true;
+
+
+            string summonerSpell1 = GetSummonerSpell(Client.GetAsync(SUMMONER_SPELL_LIST).Result.Content.ReadAsStringAsync().Result, matchStats.Participants[participantId - 1].Spell1Id).Id;
+            SetDataDragonSummonerSpellUrl(summonerSpell1);
+            picSummonerSpell1.Load(Url);
+            picSummonerSpell1.Visible = true;
+
+            string summonerSpell2 = GetSummonerSpell(Client.GetAsync(SUMMONER_SPELL_LIST).Result.Content.ReadAsStringAsync().Result, matchStats.Participants[participantId - 1].Spell2Id).Id;
+            SetDataDragonSummonerSpellUrl(summonerSpell2);
+            picSummonerSpell2.Load(Url);
+            picSummonerSpell2.Visible = true;
+
+            int[] items = new int[] {
+                matchStats.Participants[participantId - 1].Stats.Item0,
+                matchStats.Participants[participantId - 1].Stats.Item1,
+                matchStats.Participants[participantId - 1].Stats.Item2,
+                matchStats.Participants[participantId - 1].Stats.Item3,
+                matchStats.Participants[participantId - 1].Stats.Item4,
+                matchStats.Participants[participantId - 1].Stats.Item5,
+                matchStats.Participants[participantId - 1].Stats.Item6,
+            };
+
+            int counter = 0;
+
+            List<PictureBox> itemPictures = new List<PictureBox>() { picItem0, picItem1, picItem2, picItem3, picItem4, picItem5, picItem6 };
+            foreach (PictureBox picture in itemPictures)
+            {
+                SetDataDragonSummonerItemUrl(items[counter]);
+                picture.Load(Url);
+                picture.Visible = true;
+                counter++;
+            }
+            
+
+
+            SetDataDragonSummonerItemUrl(matchStats.Participants[participantId - 1].Stats.Item6);
+            picItem6.Load(Url);
+
         }
 
         static public MatchStats GetMatchStats(long matchId)
@@ -83,12 +134,24 @@ namespace LeagueReports
         {
             JToken jToken = JToken.Parse(jsonResult);
             List<Champion> allChampions = new List<Champion>();
-            foreach(JToken jsonChampion in jToken["data"])
+            foreach (JToken jsonChampion in jToken["data"])
             {
                 allChampions.Add(JsonConvert.DeserializeObject<Champion>(jsonChampion.First().ToString()));
             }
             return allChampions.Where(champion => champion.Key.CompareTo(championKey) == 0).FirstOrDefault();
         }
+
+        public SummonerSpell GetSummonerSpell(string jsonResult, int summonerSpellKey)
+        {
+            JToken jToken = JToken.Parse(jsonResult);
+            List<SummonerSpell> allSummonerSpells = new List<SummonerSpell>();
+            foreach (JToken jsonSummonerSpell in jToken["data"])
+            {
+                allSummonerSpells.Add(JsonConvert.DeserializeObject<SummonerSpell>(jsonSummonerSpell.First().ToString()));
+            }
+            return allSummonerSpells.Where(summonerSpell => summonerSpell.Key.CompareTo(summonerSpellKey) == 0).FirstOrDefault();
+        }
+
 
         public SummonerNameData GetSummonerProfileData(string userName)
         {
@@ -109,13 +172,28 @@ namespace LeagueReports
 
             JToken jTokenRank = JToken.Parse(jsonResult);
             List<RankInfo> allRankQueues = new List<RankInfo>();
-                        
+
             foreach (JToken jsonRankQueue in jTokenRank)
             {
                 allRankQueues.Add(JsonConvert.DeserializeObject<RankInfo>(jsonRankQueue.ToString()));
             }
 
             return allRankQueues.Where(queue => queue.QueueType == "RANKED_SOLO_5x5").FirstOrDefault();
+        }
+
+        static private void SetDataDragonChampionUrl(string championName)
+        {
+            Url = string.Format(@"{0}{1}.png", CHAMP_ICONS, championName);
+        }
+
+        static private void SetDataDragonSummonerSpellUrl(string summonerSpell)
+        {
+            Url = string.Format(@"{0}{1}.png", SUMMONER_SPELL_ICONS, summonerSpell);
+        }
+
+        static private void SetDataDragonSummonerItemUrl(int item)
+        {
+            Url = string.Format(@"{0}{1}.png", ITEM_ICONS, item);
         }
 
         static private void SetUrl(string url, string userName)
