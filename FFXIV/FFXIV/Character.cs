@@ -25,58 +25,58 @@ namespace FFXIV
         public Dictionary<string, ClassJob> ClassJobs { get; set; }
         public string FreeCompanyId { get; set; }
         public GearSet GearSet { get; set; }
-        public long Gender { get; set; }
+        public int Gender { get; set; }
         public GrandCompany GrandCompany { get; set; }
-        public long GuardianDeity { get; set; }
-        public long Id { get; set; }
-        public long[] Minions { get; set; }
-        public long[] Mounts { get; set; }
+        public int GuardianDeity { get; set; }
+        public int Id { get; set; }
+        public int[] Minions { get; set; }
+        public int[] Mounts { get; set; }
         public string Name { get; set; }
         public string Nameday { get; set; }
-        public long ParseDate { get; set; }
+        public int ParseDate { get; set; }
         public Uri Portrait { get; set; }
         public object PvPTeamId { get; set; }
-        public long Race { get; set; }
+        public int Race { get; set; }
         public string Server { get; set; }
-        public long Title { get; set; }
-        public long Town { get; set; }
-        public long Tribe { get; set; }
+        public int Title { get; set; }
+        public int Town { get; set; }
+        public int Tribe { get; set; }
     }
 
     public partial class ClassJob
     {
-        public long ClassId { get; set; }
-        public long ExpLevel { get; set; }
-        public long ExpLevelMax { get; set; }
-        public long ExpLevelTogo { get; set; }
+        public int ClassId { get; set; }
+        public int ExpLevel { get; set; }
+        public int ExpLevelMax { get; set; }
+        public int ExpLevelTogo { get; set; }
         public bool IsSpecialised { get; set; }
-        public long JobId { get; set; }
-        public long Level { get; set; }
+        public int JobId { get; set; }
+        public int Level { get; set; }
     }
 
     public partial class GearSet
     {
-        public Dictionary<string, long> Attributes { get; set; }
-        public long ClassId { get; set; }
+        public Dictionary<string, int> Attributes { get; set; }
+        public int ClassId { get; set; }
         public Dictionary<string, Gear> Gear { get; set; }
         public string GearKey { get; set; }
-        public long JobId { get; set; }
-        public long Level { get; set; }
+        public int JobId { get; set; }
+        public int Level { get; set; }
     }
 
     public partial class Gear
     {
-        public long? Creator { get; set; }
+        public int? Creator { get; set; }
         public object Dye { get; set; }
-        public long Id { get; set; }
+        public int Id { get; set; }
         public object[] Materia { get; set; }
         public object Mirage { get; set; }
     }
 
     public partial class GrandCompany
     {
-        public long NameId { get; set; }
-        public long RankId { get; set; }
+        public int NameId { get; set; }
+        public int RankId { get; set; }
     }
 
     public partial class Info
@@ -92,8 +92,8 @@ namespace FFXIV
     public partial class InfoCharacter
     {
         public bool IsActive { get; set; }
-        public long Priority { get; set; }
-        public long State { get; set; }
-        public long Updated { get; set; }
+        public int Priority { get; set; }
+        public int State { get; set; }
+        public int Updated { get; set; }
     }
 }
