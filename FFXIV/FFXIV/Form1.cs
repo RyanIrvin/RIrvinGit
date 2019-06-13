@@ -36,12 +36,19 @@ namespace FFXIV
             PopulateCharacterData(character);
         }
 
+        private Character GetCharacterData(string url, int characterId)
+        {
+            url += characterId;
+            Account account = JsonConvert.DeserializeObject<Account>(MakeRequest(url));
+            return account.Character;
+        }
+
         private void PopulateCharacterData(Character character)
         {
             PopulateCharacterPortrait(character.Portrait.ToString());
             PopulateCharacterName(character.Name.ToString());
             PopulateCharacterTitle(character.Title);
-            PopulateClassInfo(character);
+            PopulateCurrentClassInfo(character);
         }
 
         private void PopulateCharacterPortrait(string url) => pbCharacter.Load(url);
@@ -61,12 +68,20 @@ namespace FFXIV
             return title;
         }
 
-        private void PopulateClassInfo(Character character)
+        private void PopulateCurrentClassInfo(Character character)
         {
             ClassJobInfo classInfo = GetCurrentClassData(Class_Url, character.ActiveClassJob.JobId);
             PopulateCurrentClassIcon(Base_Url, classInfo.Icon);
             PopulateCurrentClassAbbreviation(classInfo.Abbreviation);
             PopulateCurrentClassName(classInfo.Name);
+            PopulateCurrentClassLevel(character.ActiveClassJob.Level);
+        }
+
+        private ClassJobInfo GetCurrentClassData(string url, int classId)
+        {
+            url += classId;
+            ClassJobInfo classInfo = JsonConvert.DeserializeObject<ClassJobInfo>(MakeRequest(url));
+            return classInfo;
         }
 
         private void PopulateCurrentClassIcon(string url, string iconUrl)
@@ -85,18 +100,35 @@ namespace FFXIV
             lblCurrentClassName.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(className);
         }
 
-        private ClassJobInfo GetCurrentClassData(string url, int classId)
+        private void PopulateCurrentClassLevel(int classLevel)
         {
-            url += classId;
-            ClassJobInfo classInfo = JsonConvert.DeserializeObject<ClassJobInfo>(MakeRequest(url));
-            return classInfo;
+            lblCurrentClassLevel.Text = "Level: " + classLevel.ToString();
         }
 
-        private Character GetCharacterData(string url, int characterId)
+        private void PopulateAllClassInfo(Character character) //TO-DO
         {
-            url += characterId;
-            Account account = JsonConvert.DeserializeObject<Account>(MakeRequest(url));
-            return account.Character;
+            ClassJobInfo classInfo = GetCurrentClassData(Class_Url, character.ActiveClassJob.JobId);
+            PopulateAllClassIcon();
+            PopulateAllClassAbbreviation();
+            PopulateAllClassName();
+            PopulateAllClassLevel();
+        }
+
+        private void PopulateAllClassIcon()
+        {
+
+        }
+        private void PopulateAllClassAbbreviation()
+        {
+
+        }
+        private void PopulateAllClassName()
+        {
+
+        }
+        private void PopulateAllClassLevel()
+        {
+
         }
 
         private string MakeRequest(string url)

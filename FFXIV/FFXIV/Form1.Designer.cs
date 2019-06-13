@@ -34,6 +34,7 @@
             this.lblClassAbbreviation = new System.Windows.Forms.Label();
             this.pbCurrentClassIcon = new System.Windows.Forms.PictureBox();
             this.lblCurrentClassName = new System.Windows.Forms.Label();
+            this.lblCurrentClassLevel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCharacter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentClassIcon)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +80,7 @@
             // 
             // pbCurrentClassIcon
             // 
-            this.pbCurrentClassIcon.Location = new System.Drawing.Point(339, 7);
+            this.pbCurrentClassIcon.Location = new System.Drawing.Point(339, 15);
             this.pbCurrentClassIcon.Name = "pbCurrentClassIcon";
             this.pbCurrentClassIcon.Size = new System.Drawing.Size(45, 45);
             this.pbCurrentClassIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,11 +97,22 @@
             this.lblCurrentClassName.TabIndex = 5;
             this.lblCurrentClassName.Text = "<Class Name>";
             // 
+            // lblCurrentClassLevel
+            // 
+            this.lblCurrentClassLevel.AutoSize = true;
+            this.lblCurrentClassLevel.Font = new System.Drawing.Font("Garamond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentClassLevel.Location = new System.Drawing.Point(352, 59);
+            this.lblCurrentClassLevel.Name = "lblCurrentClassLevel";
+            this.lblCurrentClassLevel.Size = new System.Drawing.Size(173, 36);
+            this.lblCurrentClassLevel.TabIndex = 6;
+            this.lblCurrentClassLevel.Text = "<Level ##>";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 442);
+            this.Controls.Add(this.lblCurrentClassLevel);
             this.Controls.Add(this.lblCurrentClassName);
             this.Controls.Add(this.pbCurrentClassIcon);
             this.Controls.Add(this.lblClassAbbreviation);
@@ -125,6 +137,7 @@
         private System.Windows.Forms.Label lblClassAbbreviation;
         private System.Windows.Forms.PictureBox pbCurrentClassIcon;
         private System.Windows.Forms.Label lblCurrentClassName;
+        private System.Windows.Forms.Label lblCurrentClassLevel;
     }
 }
 
