@@ -26,20 +26,45 @@ namespace FFXIV
             client = new HttpClient();
 
             Character character = GetCharacterData(Url);
-            pbCharacter.Load(character.Portrait.ToString());
+            PopulateCharacterData(character);
 
         }
 
-        private Character GetCharacterData(string Url)
+        private void PopulateCharacterData(Character character)
         {
-            string testRequest = MakeRequest();
-            var account =  JsonConvert.DeserializeObject<Account>(testRequest);
+            PopulateCharacterPortrait(character.Portrait.ToString());
+            PopulateCharacterName(character.Name.ToString());
+            PopulateCharacterTitle(character.Title);
+        }
+
+        private void PopulateCharacterPortrait(string Url) => pbCharacter.Load(Url);
+
+        private void PopulateCharacterName(string characterName) => lblCharacterName.Text = characterName;
+
+        private void PopulateCharacterTitle(int characterTitle)
+        {
+            Title title = GetTitleData("https://xivapi.com/Title/", characterTitle);
+            lblCharacterTitle.Text = title.Name;
+        }
+
+        private Character GetCharacterData(string url)
+        {
+            Account account = JsonConvert.DeserializeObject<Account>(MakeRequest(url));
             return account.Character;
         }
 
-        private string MakeRequest()
+        private Title GetTitleData(string url, int titleId)
         {
-            using (HttpResponseMessage response = client.GetAsync(Url).Result)
+            url += titleId;
+            Title title = JsonConvert.DeserializeObject<Title>(MakeRequest(url));
+            return title;
+        }
+
+        
+
+        private string MakeRequest(string url)
+        {
+            using (HttpResponseMessage response = client.GetAsync(url).Result)
             using (HttpContent content = response.Content)
             {
                 return content.ReadAsStringAsync().Result;
