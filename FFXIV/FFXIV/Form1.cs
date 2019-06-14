@@ -22,9 +22,11 @@ namespace FFXIV
         static string ClassIcon_Url;
         static string ClassIconAlt_Url;
         static string APIKey;
-        static HttpClient client;
-        List<PictureBox> allClassIcons;
-        List<Label> allClassLevels;
+        static HttpClient Client;
+        List<PictureBox> AllClassIcons;
+        List<Label> AllClassLevels;
+        Dictionary<string, PictureBox> PictureBoxDictionary;
+        Dictionary<string, Label> LabelDictionary;
 
         public Form1()
         {
@@ -37,14 +39,13 @@ namespace FFXIV
             ClassIcon_Url = "https://xivapi.com/cj/1/";
             ClassIconAlt_Url = "https://xivapi.com/cj/companion/";
 
-            client = new HttpClient();
+            Client = new HttpClient();
 
-            //allClassIcons = new List<PictureBox> { pbMarWar, pbGladPal, pbDarkKnight, pbCnjWhm, pbAcnSch, pbAstrologian, pbLncDrg, pbPugMnk, pbRogNin, pbArcBrd, pbThmBlm, pbAcnSum, pbMachinist, pbSamurai, pbRedMage, pbBlueMage, pbCarpenter, pbBlacksmith, pbArmorer, pbGoldsmith, pbLeatherworker, pbWeaver, pbAlchemist, pbCulinarian, pbMiner, pbBotanist, pbFisher };
-            allClassIcons = new List<PictureBox> { pbArmorer, pbGoldsmith, pbLeatherworker, pbWeaver, pbAlchemist, pbCulinarian, pbMiner, pbBotanist, pbFisher, pbGlaPal, pbAcnSum, pbAcnSch, pbRogNin, pbPugMnk, pbMachinist, pbDarkKnight, pbAstrologian, pbSamurai, pbRedMage, pbBlueMage, pbMrdWar, pbLncDrg, pbArcBrd, pbCnjWhm, pbThmBlm, pbCarpenter, pbBlacksmith };
-            allClassLevels = new List<Label> { lblArmorerLevel, lblGoldsmithLevel, lblLeatherworkerLevel, lblWeaverLevel, lblAlchemistLevel, lblCulinarianLevel, lblMinerLevel, lblBotanistLevel, lblFisherLevel, lblGlaPalLevel, lblAcnSumLevel, lblAcnSchLevel, lblRogNinLevel, lblPugMnkLevel, lblMachinistLevel, lblDarkKnightLevel, lblAstrologianLevel, lblSamuraiLevel, lblRedMageLevel, lblBlueMageLevel, lblMrdWarLevel, lblLncDrgLevel, lblArcBrdLevel, lblCnjWhmLevel, lblThmBlmLevel, lblCarpenterLevel, lblBlacksmithLevel };
+            PictureBoxDictionary = new Dictionary<string, PictureBox> { { "10", pbArmorer }, { "11", pbGoldsmith }, { "12", pbLeatherworker },{ "13", pbWeaver }, { "14", pbAlchemist }, { "15", pbCulinarian }, { "16", pbMiner }, { "17", pbBotanist }, { "18", pbFisher }, { "1", pbGlaPal },{ "19", pbGlaPal }, { "26", pbAcnSum }, { "27", pbAcnSum }, { "28", pbAcnSch }, { "29", pbRogNin }, { "30", pbRogNin }, { "2", pbPugMnk }, { "20", pbPugMnk }, { "31", pbMachinist },{ "32", pbDarkKnight }, { "33", pbAstrologian }, { "34", pbSamurai }, { "35", pbRedMage }, { "36", pbBlueMage }, { "3", pbMrdWar }, { "21", pbMrdWar }, { "4", pbLncDrg }, { "22", pbLncDrg }, { "5", pbArcBrd }, { "23", pbArcBrd }, { "6", pbCnjWhm }, { "24", pbCnjWhm }, { "7", pbThmBlm }, { "25", pbThmBlm }, { "8", pbCarpenter }, {"9",pbBlacksmith }};
+            LabelDictionary = new Dictionary<string, Label> { { "10", lblArmorerLevel }, { "11", lblGoldsmithLevel }, { "12", lblLeatherworkerLevel }, { "13", lblWeaverLevel }, { "14", lblAlchemistLevel }, { "15", lblCulinarianLevel }, { "16", lblMinerLevel }, { "17", lblBotanistLevel }, { "18", lblFisherLevel }, { "1", lblGlaPalLevel }, { "19", lblGlaPalLevel }, { "26", lblAcnSumLevel }, { "27", lblAcnSumLevel }, { "28", lblAcnSchLevel }, { "29", lblRogNinLevel }, { "30", lblRogNinLevel }, { "2", lblPugMnkLevel }, { "20", lblPugMnkLevel }, { "31", lblMachinistLevel }, { "32", lblDarkKnightLevel }, { "33", lblAstrologianLevel }, { "34", lblSamuraiLevel }, { "35", lblRedMageLevel }, { "36", lblBlueMageLevel }, { "3", lblMrdWarLevel }, { "21", lblMrdWarLevel }, { "4", lblLncDrgLevel }, { "22", lblLncDrgLevel }, { "5", lblArcBrdLevel }, { "23", lblArcBrdLevel }, { "6", lblCnjWhmLevel }, { "24", lblCnjWhmLevel }, { "7", lblThmBlmLevel }, { "25", lblThmBlmLevel }, { "8", lblCarpenterLevel }, { "9", lblBlacksmithLevel }};
 
             //Ryan - 2760399  Sam - 25465442  Thomas - 8014946
-            Character character = GetCharacterData(Character_Url, 8014946);
+            Character character = GetCharacterData(Character_Url, 2760399);
             PopulateCharacterData(character);
         }
 
@@ -138,33 +139,15 @@ namespace FFXIV
         {
             int indexCounter = 0;
 
-            foreach(var classJob in characterClasses)
+            foreach (var classJob in characterClasses)
             {
-                string testString = classJob.Key;
-                string[] classJobValues = testString.Split('_');
-                
-                if (classJobValues[0].Equals(classJobValues[1]))
-                {
-                    ClassJobInfo classInfo = GetClassData(Class_Url, classJob.Value.JobId);
-                    string formattedClassName = classInfo.Name.Replace(" ", "");
-                    allClassIcons[indexCounter].Load(ClassIconAlt_Url + formattedClassName +".png");
-                    allClassLevels[indexCounter].Text = classJob.Value.Level.ToString();
-                }
-                else if(classJob.Value.Level > 30)
-                {
-                    ClassJobInfo classInfo = GetClassData(Class_Url, classJob.Value.JobId);
-                    string formattedClassName = classInfo.Name.Replace(" ", "");
-                    allClassIcons[indexCounter].Load(ClassIconAlt_Url + formattedClassName + ".png");
-                    allClassLevels[indexCounter].Text = classJob.Value.Level.ToString();
-                }
-                else
-                {
-                    ClassJobInfo classInfo = GetClassData(Class_Url, classJob.Value.ClassId);
-                    string formattedClassName = classInfo.Name.Replace(" ", "");
-                    allClassIcons[indexCounter].Load(ClassIconAlt_Url + formattedClassName + ".png");
-                    allClassLevels[indexCounter].Text = classJob.Value.Level.ToString();
-                }
-                indexCounter++;
+                bool job = classJob.Value.Level <= 30 ? false : true;
+                string[] classJobValues = classJob.Key.Split('_');
+                string classJobValue = job ? classJobValues[0] : classJobValues[1];
+                ClassJobInfo classInfo = GetClassData(Class_Url, job ? classJob.Value.JobId : classJob.Value.ClassId);
+                string formattedClassName = classInfo.Name.Replace(" ", "");
+                PictureBoxDictionary[classJobValue].Load(ClassIconAlt_Url + formattedClassName + ".png");
+                LabelDictionary[classJobValue].Text = classJob.Value.Level.ToString();
             }
         }
         private void PopulateAllClassAbbreviations()
@@ -182,7 +165,7 @@ namespace FFXIV
 
         private string MakeRequest(string url)
         {
-            using (HttpResponseMessage response = client.GetAsync(url).Result)
+            using (HttpResponseMessage response = Client.GetAsync(url).Result)
             using (HttpContent content = response.Content)
             {
                 return content.ReadAsStringAsync().Result;

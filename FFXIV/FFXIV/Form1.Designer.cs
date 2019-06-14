@@ -184,9 +184,9 @@
             this.lblCurrentClassLevel.Font = new System.Drawing.Font("Garamond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentClassLevel.Location = new System.Drawing.Point(352, 59);
             this.lblCurrentClassLevel.Name = "lblCurrentClassLevel";
-            this.lblCurrentClassLevel.Size = new System.Drawing.Size(173, 36);
+            this.lblCurrentClassLevel.Size = new System.Drawing.Size(123, 36);
             this.lblCurrentClassLevel.TabIndex = 6;
-            this.lblCurrentClassLevel.Text = "<Level ##>";
+            this.lblCurrentClassLevel.Text = "<Level>";
             // 
             // pbGlaPal
             // 
