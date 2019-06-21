@@ -1,0 +1,7 @@
+C:\Users\rirvin\source\repos\ReverseAnArray\ReverseAnArray\bin\Debug\ReverseAnArray.exe.config
+C:\Users\rirvin\source\repos\ReverseAnArray\ReverseAnArray\bin\Debug\ReverseAnArray.exe
+C:\Users\rirvin\source\repos\ReverseAnArray\ReverseAnArray\bin\Debug\ReverseAnArray.pdb
+C:\Users\rirvin\source\repos\ReverseAnArray\ReverseAnArray\obj\Debug\ReverseAnArray.csprojAssemblyReference.cache
+C:\Users\rirvin\source\repos\ReverseAnArray\ReverseAnArray\obj\Debug\ReverseAnArray.csproj.CoreCompileInputs.cache
+C:\Users\rirvin\source\repos\ReverseAnArray\ReverseAnArray\obj\Debug\ReverseAnArray.exe
+C:\Users\rirvin\source\repos\ReverseAnArray\ReverseAnArray\obj\Debug\ReverseAnArray.pdb
