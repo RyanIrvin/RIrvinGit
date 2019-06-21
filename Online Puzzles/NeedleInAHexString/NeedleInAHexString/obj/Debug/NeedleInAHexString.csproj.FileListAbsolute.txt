@@ -1,0 +1,7 @@
+C:\Users\rirvin\source\repos\NeedleInAHexString\NeedleInAHexString\bin\Debug\NeedleInAHexString.exe.config
+C:\Users\rirvin\source\repos\NeedleInAHexString\NeedleInAHexString\bin\Debug\NeedleInAHexString.exe
+C:\Users\rirvin\source\repos\NeedleInAHexString\NeedleInAHexString\bin\Debug\NeedleInAHexString.pdb
+C:\Users\rirvin\source\repos\NeedleInAHexString\NeedleInAHexString\obj\Debug\NeedleInAHexString.csprojAssemblyReference.cache
+C:\Users\rirvin\source\repos\NeedleInAHexString\NeedleInAHexString\obj\Debug\NeedleInAHexString.csproj.CoreCompileInputs.cache
+C:\Users\rirvin\source\repos\NeedleInAHexString\NeedleInAHexString\obj\Debug\NeedleInAHexString.exe
+C:\Users\rirvin\source\repos\NeedleInAHexString\NeedleInAHexString\obj\Debug\NeedleInAHexString.pdb
