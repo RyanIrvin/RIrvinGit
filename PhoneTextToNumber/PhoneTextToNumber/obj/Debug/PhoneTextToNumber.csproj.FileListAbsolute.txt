@@ -1,0 +1,7 @@
+C:\Users\Ryan\source\repos\PhoneTextToNumber\PhoneTextToNumber\bin\Debug\PhoneTextToNumber.exe.config
+C:\Users\Ryan\source\repos\PhoneTextToNumber\PhoneTextToNumber\bin\Debug\PhoneTextToNumber.exe
+C:\Users\Ryan\source\repos\PhoneTextToNumber\PhoneTextToNumber\bin\Debug\PhoneTextToNumber.pdb
+C:\Users\Ryan\source\repos\PhoneTextToNumber\PhoneTextToNumber\obj\Debug\PhoneTextToNumber.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\PhoneTextToNumber\PhoneTextToNumber\obj\Debug\PhoneTextToNumber.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\PhoneTextToNumber\PhoneTextToNumber\obj\Debug\PhoneTextToNumber.exe
+C:\Users\Ryan\source\repos\PhoneTextToNumber\PhoneTextToNumber\obj\Debug\PhoneTextToNumber.pdb

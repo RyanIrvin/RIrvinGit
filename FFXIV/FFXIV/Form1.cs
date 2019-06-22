@@ -123,9 +123,6 @@ namespace FFXIV
         {
             //ClassJobInfo allClassInfo = GetAllClassData(Class_Url, character.ClassJobs);
             PopulateAllClassIcons(character.ClassJobs);
-            PopulateAllClassAbbreviations();
-            PopulateAllClassNames();
-            PopulateAllClassLevels();
         }
 
         private ClassJobInfo GetAllClassData(string url, int classId)
@@ -137,7 +134,6 @@ namespace FFXIV
 
         private void PopulateAllClassIcons(Dictionary<string, ClassJob> characterClasses)
         {
-            int indexCounter = 0;
 
             foreach (var classJob in characterClasses)
             {
@@ -146,21 +142,10 @@ namespace FFXIV
                 string classJobValue = job ? classJobValues[0] : classJobValues[1];
                 ClassJobInfo classInfo = GetClassData(Class_Url, job ? classJob.Value.JobId : classJob.Value.ClassId);
                 string formattedClassName = classInfo.Name.Replace(" ", "");
+
                 PictureBoxDictionary[classJobValue].Load(ClassIconAlt_Url + formattedClassName + ".png");
                 LabelDictionary[classJobValue].Text = classJob.Value.Level.ToString();
             }
-        }
-        private void PopulateAllClassAbbreviations()
-        {
-
-        }
-        private void PopulateAllClassNames()
-        {
-
-        }
-        private void PopulateAllClassLevels()
-        {
-
         }
 
         private string MakeRequest(string url)

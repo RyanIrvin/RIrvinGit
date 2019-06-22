@@ -1,0 +1,10 @@
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\bin\Debug\DiceRoller.exe.config
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\bin\Debug\DiceRoller.exe
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\bin\Debug\DiceRoller.pdb
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\obj\Debug\DiceRoller.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\obj\Debug\DiceRoller.DiceRoller.resources
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\obj\Debug\DiceRoller.Properties.Resources.resources
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\obj\Debug\DiceRoller.csproj.GenerateResource.cache
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\obj\Debug\DiceRoller.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\obj\Debug\DiceRoller.exe
+C:\Users\Ryan\source\repos\DiceRoller\DiceRoller\obj\Debug\DiceRoller.pdb
