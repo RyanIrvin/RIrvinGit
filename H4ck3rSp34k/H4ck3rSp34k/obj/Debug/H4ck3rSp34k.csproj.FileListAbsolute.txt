@@ -1,0 +1,7 @@
+C:\Users\Ryan\source\repos\H4ck3rSp34k\H4ck3rSp34k\bin\Debug\H4ck3rSp34k.exe.config
+C:\Users\Ryan\source\repos\H4ck3rSp34k\H4ck3rSp34k\bin\Debug\H4ck3rSp34k.exe
+C:\Users\Ryan\source\repos\H4ck3rSp34k\H4ck3rSp34k\bin\Debug\H4ck3rSp34k.pdb
+C:\Users\Ryan\source\repos\H4ck3rSp34k\H4ck3rSp34k\obj\Debug\H4ck3rSp34k.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\H4ck3rSp34k\H4ck3rSp34k\obj\Debug\H4ck3rSp34k.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\H4ck3rSp34k\H4ck3rSp34k\obj\Debug\H4ck3rSp34k.exe
+C:\Users\Ryan\source\repos\H4ck3rSp34k\H4ck3rSp34k\obj\Debug\H4ck3rSp34k.pdb
