@@ -1,0 +1,7 @@
+C:\Users\rirvin\source\repos\HowManyVowels\HowManyVowels\obj\Debug\HowManyVowels.csprojAssemblyReference.cache
+C:\Users\rirvin\source\repos\HowManyVowels\HowManyVowels\obj\Debug\HowManyVowels.csproj.CoreCompileInputs.cache
+C:\Users\rirvin\source\repos\HowManyVowels\HowManyVowels\bin\Debug\HowManyVowels.exe.config
+C:\Users\rirvin\source\repos\HowManyVowels\HowManyVowels\bin\Debug\HowManyVowels.exe
+C:\Users\rirvin\source\repos\HowManyVowels\HowManyVowels\bin\Debug\HowManyVowels.pdb
+C:\Users\rirvin\source\repos\HowManyVowels\HowManyVowels\obj\Debug\HowManyVowels.exe
+C:\Users\rirvin\source\repos\HowManyVowels\HowManyVowels\obj\Debug\HowManyVowels.pdb
