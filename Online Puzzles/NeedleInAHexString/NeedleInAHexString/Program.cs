@@ -11,7 +11,7 @@ namespace NeedleInAHexString
         /*
         Find the index of a string within a hex encoded string.
 
-        You will be given a string which needs to be found in another string which has previously been tranlated into hex. You will need to return the first index of the needle within the hex encoded string.
+        You will be given a string which needs to be found in another string which has previously been translated into hex. You will need to return the first index of the needle within the hex encoded string.
         
         Examples
         FirstIndex("68 65 6c 6c 6f 20 77 6f 72 6c 64", "world") ➞ 6
@@ -23,7 +23,7 @@ namespace NeedleInAHexString
 
         static void Main(string[] args)
         {
-            string myHexString = "65 6d 6f 6e 65 79 20 61 64 76 69 73 6f 72";
+            string myHexString = "65 6d 6f 6e 65 79 20 61 64 76 69 73 6f 72";  //Hex value of "eMoney Advisor"
             string needle = "advisor";
 
             Console.WriteLine(FirstIndex(myHexString, needle));
