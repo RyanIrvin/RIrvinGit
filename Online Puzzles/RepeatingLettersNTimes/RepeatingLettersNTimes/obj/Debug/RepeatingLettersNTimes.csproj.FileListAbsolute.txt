@@ -1,0 +1,7 @@
+C:\Users\Ryan\source\repos\RepeatingLettersNTimes\RepeatingLettersNTimes\obj\Debug\RepeatingLettersNTimes.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\RepeatingLettersNTimes\RepeatingLettersNTimes\obj\Debug\RepeatingLettersNTimes.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\RepeatingLettersNTimes\RepeatingLettersNTimes\bin\Debug\RepeatingLettersNTimes.exe.config
+C:\Users\Ryan\source\repos\RepeatingLettersNTimes\RepeatingLettersNTimes\bin\Debug\RepeatingLettersNTimes.exe
+C:\Users\Ryan\source\repos\RepeatingLettersNTimes\RepeatingLettersNTimes\bin\Debug\RepeatingLettersNTimes.pdb
+C:\Users\Ryan\source\repos\RepeatingLettersNTimes\RepeatingLettersNTimes\obj\Debug\RepeatingLettersNTimes.exe
+C:\Users\Ryan\source\repos\RepeatingLettersNTimes\RepeatingLettersNTimes\obj\Debug\RepeatingLettersNTimes.pdb
