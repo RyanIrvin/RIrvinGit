@@ -1,0 +1,7 @@
+C:\Users\Ryan\source\repos\TxtTesting\TxtTesting\obj\Debug\TxtTesting.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\TxtTesting\TxtTesting\obj\Debug\TxtTesting.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\TxtTesting\TxtTesting\bin\Debug\TxtTesting.exe.config
+C:\Users\Ryan\source\repos\TxtTesting\TxtTesting\bin\Debug\TxtTesting.exe
+C:\Users\Ryan\source\repos\TxtTesting\TxtTesting\bin\Debug\TxtTesting.pdb
+C:\Users\Ryan\source\repos\TxtTesting\TxtTesting\obj\Debug\TxtTesting.exe
+C:\Users\Ryan\source\repos\TxtTesting\TxtTesting\obj\Debug\TxtTesting.pdb
