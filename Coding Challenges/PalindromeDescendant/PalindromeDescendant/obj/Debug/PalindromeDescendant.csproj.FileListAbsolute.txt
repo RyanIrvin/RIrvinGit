@@ -1,0 +1,6 @@
+C:\Users\Ryan\source\repos\PalindromeDescendant\PalindromeDescendant\bin\Debug\PalindromeDescendant.exe.config
+C:\Users\Ryan\source\repos\PalindromeDescendant\PalindromeDescendant\bin\Debug\PalindromeDescendant.exe
+C:\Users\Ryan\source\repos\PalindromeDescendant\PalindromeDescendant\bin\Debug\PalindromeDescendant.pdb
+C:\Users\Ryan\source\repos\PalindromeDescendant\PalindromeDescendant\obj\Debug\PalindromeDescendant.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\PalindromeDescendant\PalindromeDescendant\obj\Debug\PalindromeDescendant.exe
+C:\Users\Ryan\source\repos\PalindromeDescendant\PalindromeDescendant\obj\Debug\PalindromeDescendant.pdb
