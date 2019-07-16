@@ -1,0 +1,7 @@
+C:\Users\rirvin\source\repos\EnglishToPigLatinTranslator\EnglishToPigLatinTranslator\bin\Debug\EnglishToPigLatinTranslator.exe.config
+C:\Users\rirvin\source\repos\EnglishToPigLatinTranslator\EnglishToPigLatinTranslator\bin\Debug\EnglishToPigLatinTranslator.exe
+C:\Users\rirvin\source\repos\EnglishToPigLatinTranslator\EnglishToPigLatinTranslator\bin\Debug\EnglishToPigLatinTranslator.pdb
+C:\Users\rirvin\source\repos\EnglishToPigLatinTranslator\EnglishToPigLatinTranslator\obj\Debug\EnglishToPigLatinTranslator.csprojAssemblyReference.cache
+C:\Users\rirvin\source\repos\EnglishToPigLatinTranslator\EnglishToPigLatinTranslator\obj\Debug\EnglishToPigLatinTranslator.csproj.CoreCompileInputs.cache
+C:\Users\rirvin\source\repos\EnglishToPigLatinTranslator\EnglishToPigLatinTranslator\obj\Debug\EnglishToPigLatinTranslator.exe
+C:\Users\rirvin\source\repos\EnglishToPigLatinTranslator\EnglishToPigLatinTranslator\obj\Debug\EnglishToPigLatinTranslator.pdb
