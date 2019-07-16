@@ -1,0 +1,11 @@
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\bin\Debug\SimpleBankParser.exe.config
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\bin\Debug\SimpleBankParser.exe
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\bin\Debug\SimpleBankParser.pdb
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\obj\Debug\SimpleBankParser.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\obj\Debug\SimpleBankParser.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\obj\Debug\SimpleBankParser.exe
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\obj\Debug\SimpleBankParser.pdb
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Ryan\source\repos\SimpleBankParser\SimpleBankParser\obj\Debug\SimpleBankParser.csproj.CopyComplete
