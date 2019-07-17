@@ -15,7 +15,7 @@ namespace SimpleBankParser
 {
     class Program
     {
-        static string URL = "https://signin.simple.com/";
+        static string URL = "https://signin.simple.com";
         static CookieContainer cookies = new CookieContainer();
 
         static void Main(string[] args)
@@ -31,31 +31,35 @@ namespace SimpleBankParser
             string message = GetMFAMessage(response);
             Console.WriteLine(message);
 
-            if(message.Contains("We just sent a code to your currently registered phone number to verify."))
+            if (message.Contains("We just sent a code to your currently registered phone number to verify.")) //Check to see if resulting page is asking for pin/2fa
             {
                 Console.WriteLine("Pin Code: ");
                 string pinCode = Console.ReadLine();
 
-                SubmitMfa(csrfToken,GetToken(response),GetPartialToken(response), pinCode);
+                SubmitMfa(csrfToken, GetToken(response), GetPartialToken(response), pinCode);
             }
 
-            Console.ReadKey();
+            GetAccountInfo();
+
+            Console.ReadKey(); // Page is rendered via JavaScript, unable to pull account info
         }
+
+        private static void GetAccountInfo() { }
 
         private static string GetToken(string response)
         {
-            return Regex.Match(response, @"(?<=value="").* (?= "" name=""token"")").ToString();
+            return Regex.Match(response, @"(?<=value="").*(?="" name=""token"")").ToString();
         }
 
         private static string GetPartialToken(string response)
         {
-            return Regex.Match(response, @"(?<=value="").* (?= "" name=""partial_auth_token"")").ToString();
+            return Regex.Match(response, @"(?<=value="").*(?="" name=""partial_auth_token"")").ToString();
         }
 
-        private static string SubmitMfa(string csrfToken,string token, string partialToken, string pinCode)
+        private static string SubmitMfa(string csrfToken, string token, string partialToken, string pinCode)
         {
-            string postData = $"_csrf={csrfToken}%3D&pin={pinCode}&token{token}&partial_auth_token{partialToken}";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
+            string postData = $"_csrf={csrfToken}%3D&pin={pinCode}&token={token}&partial_auth_token={partialToken}";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"{URL}/verify");
             request.CookieContainer = cookies;
             request.Method = "POST";
             request.ContentType = "application/x-www-form-urlencoded";
@@ -84,7 +88,7 @@ namespace SimpleBankParser
         }
 
         private static string SubmitLogin(string token, string username, string password)
-        { 
+        {
             string postData = $"_csrf={token}%3D&username={username}&password={password}";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
