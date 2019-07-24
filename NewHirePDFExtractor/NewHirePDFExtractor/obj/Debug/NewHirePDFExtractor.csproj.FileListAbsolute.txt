@@ -8,3 +8,13 @@ C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\New
 C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.csproj.CopyComplete
 C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.exe
 C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.pdb
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\NewHirePDFExtractor.exe.config
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\NewHirePDFExtractor.exe
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\NewHirePDFExtractor.pdb
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\itextsharp.dll
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\itextsharp.xml
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.csprojAssemblyReference.cache
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.csproj.CoreCompileInputs.cache
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.csproj.CopyComplete
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.exe
+C:\Users\rirvin\Documents\GitHub\RIrvinGit\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.pdb
