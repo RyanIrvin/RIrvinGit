@@ -1,0 +1,10 @@
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\NewHirePDFExtractor.exe.config
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\NewHirePDFExtractor.exe
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\NewHirePDFExtractor.pdb
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\itextsharp.dll
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\bin\Debug\itextsharp.xml
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.csprojAssemblyReference.cache
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.csproj.CopyComplete
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.exe
+C:\Users\Ryan\source\repos\NewHirePDFExtractor\NewHirePDFExtractor\obj\Debug\NewHirePDFExtractor.pdb
