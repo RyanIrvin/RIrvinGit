@@ -1,0 +1,8 @@
+C:\Users\Sticky\RIrvinGit\ItemLookUpGUI\ItemLookUpGUI\bin\Debug\ItemLookUpGUI.dll
+C:\Users\Sticky\RIrvinGit\ItemLookUpGUI\ItemLookUpGUI\bin\Debug\ItemLookUpGUI.pdb
+C:\Users\Sticky\RIrvinGit\ItemLookUpGUI\ItemLookUpGUI\obj\Debug\ItemLookUpGUI.csprojAssemblyReference.cache
+C:\Users\Sticky\RIrvinGit\ItemLookUpGUI\ItemLookUpGUI\obj\Debug\ItemLookUpGUI.UserControl1.resources
+C:\Users\Sticky\RIrvinGit\ItemLookUpGUI\ItemLookUpGUI\obj\Debug\ItemLookUpGUI.csproj.GenerateResource.cache
+C:\Users\Sticky\RIrvinGit\ItemLookUpGUI\ItemLookUpGUI\obj\Debug\ItemLookUpGUI.csproj.CoreCompileInputs.cache
+C:\Users\Sticky\RIrvinGit\ItemLookUpGUI\ItemLookUpGUI\obj\Debug\ItemLookUpGUI.dll
+C:\Users\Sticky\RIrvinGit\ItemLookUpGUI\ItemLookUpGUI\obj\Debug\ItemLookUpGUI.pdb

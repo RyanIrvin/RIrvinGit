@@ -12,9 +12,17 @@ namespace ItemLookUpGUI
 {
     public partial class UserControl1: UserControl
     {
+        ItemLookup ItemLookup;
+
         public UserControl1()
         {
             InitializeComponent();
+            ItemLookup = new ItemLookup();
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            OutputTextBox.Text = ItemLookup.FindItem(InputTextBox.Text);
         }
     }
 }

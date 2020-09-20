@@ -8,12 +8,13 @@ namespace ItemLookUpGUI
 {
     class ItemLookup
     {
-        private string Input;
-
-        
-        public ItemLookup(string input)
+        public ItemLookup()
         {
-            Input = input;
+        }
+
+        public string FindItem(string input)
+        {
+            return "Test string";
         }
     }
 }
