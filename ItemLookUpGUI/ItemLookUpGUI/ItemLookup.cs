@@ -16,9 +16,21 @@ namespace ItemLookupGui
             db = new ItemLookupEntities();
         }
 
-        public List<string> FindId(string itemName)
+        public List<string> FindItems(string itemName)
         {
-            return db.ItemLists.Where(itemList => itemList.ItemName.Contains(itemName)).Select(ItemList => ItemList.ItemID).ToList();
+
+            List<ItemList> itemListList = db.ItemLists.Where(itemList => itemList.ItemName.Contains(itemName)).ToList();
+            return JoinItemList(itemListList);
+        }
+
+        private List<string> JoinItemList(List<ItemList> itemLists)
+        {
+            List<string> list = new List<string>();
+            foreach(ItemList itemList in itemLists)
+            {
+                list.Add($"{itemList.ItemID} - {itemList.ItemName}");
+            }
+            return list;
         }
     }
 }
