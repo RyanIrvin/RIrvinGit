@@ -16,9 +16,9 @@ namespace ItemLookupGui
             db = new ItemLookupEntities();
         }
 
-        public string FindId(string itemName)
+        public List<string> FindId(string itemName)
         {
-            return db.ItemLists.FirstOrDefault(itemList => itemList.ItemName.Contains(itemName)).ItemID;
+            return db.ItemLists.Where(itemList => itemList.ItemName.Contains(itemName)).Select(ItemList => ItemList.ItemID).ToList();
         }
     }
 }
