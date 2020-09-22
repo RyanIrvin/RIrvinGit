@@ -18,19 +18,8 @@ namespace ItemLookupGui
 
         public List<string> FindItems(string itemName)
         {
-
             List<ItemList> itemListList = db.ItemLists.Where(itemList => itemList.ItemName.Contains(itemName)).ToList();
-            return JoinItemList(itemListList);
-        }
-
-        private List<string> JoinItemList(List<ItemList> itemLists)
-        {
-            List<string> list = new List<string>();
-            foreach(ItemList itemList in itemLists)
-            {
-                list.Add($"{itemList.ItemID} - {itemList.ItemName}");
-            }
-            return list;
+            return itemListList.SelectMany(itemList => new List<string> { $"{itemList.ItemID} - {itemList.ItemName}" }).ToList();
         }
     }
 }
