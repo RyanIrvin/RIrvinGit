@@ -16,8 +16,22 @@ namespace ItemLookupGui
             db = new ItemLookupEntities();
         }
 
+        public List<string> Find(string inputText)
+        {
+            return FindItems(inputText.Split(','));
+        }
 
-        public List<string> FindItems(string itemIdentifier)
+        private List<string> FindItems(string[] itemIdentifiers)
+        {
+            List<string> items = new List<string>();
+            foreach(string itemIdentifier in itemIdentifiers)
+            {
+                items.AddRange(FindItems(itemIdentifier));
+            }
+            return items;
+        }
+
+        private List<string> FindItems(string itemIdentifier)
         {
             List<ItemList> itemListList = GetItemList(itemIdentifier.Trim());
             return itemListList.Count > 0 ? itemListList.SelectMany(itemList => new List<string> { $"{itemList.ItemID} - {itemList.ItemName}" }).ToList() : new List<string> { "No Results Found." };

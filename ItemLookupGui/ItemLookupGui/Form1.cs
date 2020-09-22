@@ -21,7 +21,7 @@ namespace ItemLookupGui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox2.Text = String.Join($"{Environment.NewLine}",ItemLookup.FindItems(textBox1.Text));
+            textBox2.Text = String.Join($"{Environment.NewLine}",ItemLookup.Find(textBox1.Text));
         }
     }
 }
