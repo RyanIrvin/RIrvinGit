@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ItemLookupGui
@@ -10,15 +11,17 @@ namespace ItemLookupGui
     class ItemLookup
     {
         ItemLookupEntities db;
+        List<ItemList> itemList;
 
         public ItemLookup()
         {
             db = new ItemLookupEntities();
+            itemList = db.ItemLists.ToList();
         }
 
         public List<string> Find(string inputText)
         {
-            return FindItems(inputText.Split(','));
+            return FindItems(Regex.Split(inputText, Environment.NewLine));
         }
 
         private List<string> FindItems(string[] itemIdentifiers)
@@ -39,8 +42,8 @@ namespace ItemLookupGui
 
         private List<ItemList> GetItemList(string itemIdentifier)
         {
-            var itemIDList = db.ItemLists.Where(itemList => itemList.ItemID.ToString().Contains(itemIdentifier)).ToList();
-            var itemNameList = db.ItemLists.Where(itemList => itemList.ItemName.Contains(itemIdentifier)).ToList();
+            var itemIDList = itemList.Where(itemList => itemList.ItemID.ToString().Contains(itemIdentifier)).ToList();
+            var itemNameList = itemList.Where(itemList => itemList.ItemName.Contains(itemIdentifier)).ToList();
             return itemIDList.Count > 0 ? itemIDList : itemNameList;
         }
     }
